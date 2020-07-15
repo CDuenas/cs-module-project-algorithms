@@ -4,8 +4,20 @@ Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
     # Your code here
+    #New arr needs to be the length of the arr
+    #Each value in the new arr is set to 1
+    newArr = [1] * len(arr)
 
-    pass
+
+    for i in range(0, len(arr)):
+        #second loop to create new array to multiply
+        for k in range(0, len(arr)):
+            #avoids multiplying by self
+            if i != k:
+
+                newArr[i] = newArr[i] * arr[k]
+
+    return newArr
 
 
 if __name__ == '__main__':

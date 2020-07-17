@@ -4,8 +4,10 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    #If we add each # once and * by 2 then subtract the sum of the whole array
+    #we get the required number
 
-    pass
+    return 2 * sum(set(arr)) - sum(arr)
 
 
 if __name__ == '__main__':
